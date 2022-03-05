@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n6V+8InsWxJ9bG/QBtpRoTA0jun10akAOQz8wSz+mtLtqMi5qqpTEU4P/vPOAeg2b6ptOcqcS6HXFJlwO1oyKA==",
+  "success": true,
+  "projectFilePath": "E:\\Project\\Erisu\\Erisu\\Erisu\\Erisu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\13269\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
