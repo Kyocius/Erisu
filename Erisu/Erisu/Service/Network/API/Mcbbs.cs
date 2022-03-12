@@ -1,8 +1,5 @@
 ﻿using Erisu.Model;
 using Newtonsoft.Json;
-using Newtonsoft.Json;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Erisu.Service.Network.API;
 
