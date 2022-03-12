@@ -13,7 +13,7 @@ public class Mcbbs : BaseApi
         Libraries = $"{Url}/maven";
     }
 
-    public override async Task<VersionManifestModel> GetLatestVersion()
+    public override async Task<VersionManifestModel> GetVersionManifest()
     {
         using var res  = await HttpHelper.HttpGetAsync(this.VersionManifest);
 
