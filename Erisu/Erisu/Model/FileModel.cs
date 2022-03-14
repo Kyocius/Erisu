@@ -5,7 +5,7 @@ namespace Erisu.Model;
 /// <summary>
 /// 文件信息模型
 /// </summary>
-public record class FileModel
+public class FileModel
 {
     [JsonProperty("path")]
     public string Path { get; set; }

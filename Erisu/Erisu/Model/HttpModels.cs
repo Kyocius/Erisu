@@ -6,7 +6,7 @@ namespace Erisu.Model;
 /// <summary>
 /// Http下载请求模型
 /// </summary>
-public record class HttpDownloadRequest
+public class HttpDownloadRequest
 {
     /// <summary>
     /// 下载文件存放目录

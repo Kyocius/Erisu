@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Erisu.Model;
 
-public record class VersionManifestModel
+public class VersionManifestModel
 {
     [JsonProperty("latest")]
     public Dictionary<string, string> Latest { get; set; }

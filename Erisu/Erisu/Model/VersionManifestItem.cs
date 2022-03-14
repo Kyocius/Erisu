@@ -2,7 +2,7 @@
 
 namespace Erisu.Model;
 
-public record class VersionManifestItem
+public class VersionManifestItem
 {
     [JsonProperty("id")]
     public string Id { get; set; }

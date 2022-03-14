@@ -3,7 +3,7 @@
     /// <summary>
     /// JavaAgent模型
     /// </summary>
-    public record class JavaAgentModel
+    public class JavaAgentModel
     {
         public string AgentPath { get; set; }
 
