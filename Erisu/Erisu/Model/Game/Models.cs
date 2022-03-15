@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace Erisu.Model.Game;
 
@@ -11,12 +10,6 @@ public class Downloads
     [JsonProperty("classifiers")]
     public Dictionary<string, FileModel> Classifiers { get; set; }
 }
-
-//public class Extract
-//{
-//    [JsonProperty("exclude")] 
-//    public List<string> Exclude { get; set; }
-//}
 
 public class RuleModel
 {
