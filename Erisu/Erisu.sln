@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erisu", "Erisu\Erisu.csproj", "{52452AA1-2FD7-42AF-AAC1-2C239FD480EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erisu.Native", "Erisu.Extend\Erisu.Native.csproj", "{BB987718-7215-4F22-8188-4E26FC9ACFEA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{52452AA1-2FD7-42AF-AAC1-2C239FD480EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52452AA1-2FD7-42AF-AAC1-2C239FD480EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52452AA1-2FD7-42AF-AAC1-2C239FD480EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB987718-7215-4F22-8188-4E26FC9ACFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB987718-7215-4F22-8188-4E26FC9ACFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB987718-7215-4F22-8188-4E26FC9ACFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB987718-7215-4F22-8188-4E26FC9ACFEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
