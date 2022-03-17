@@ -11,6 +11,7 @@ namespace Erisu.Service.Local;
 /// </summary>
 public class FileHelper
 {
+    //用于验证文件的方法
     public static bool FileVerify(FileInfo file, int? size = null, string sha1 = default, string MD5 = default)
     {
         if (!file.Exists)
@@ -62,4 +63,33 @@ public class FileHelper
 
     public static bool FileVerifyHttpDownload(HttpDownloadRequest request, HttpDownloadResponse response) 
         => FileVerify(response.FileInfo, request.Size, request.Sha1);
+
+    public static string? FindFile(DirectoryInfo directory, string fileName)
+    {
+        //返回 directory 中所有文件名称
+        foreach (var item in directory.GetFiles())
+        {
+            if (item.Name == fileName)
+                return item.FullName;
+        }
+        //返回 directory 中所有子目录的名称
+        foreach (var item in directory.GetDirectories())
+            return FindFile(item, fileName);
+
+        return null;
+    }
+
+    public static void DeleteAllFiles(DirectoryInfo directory)
+    {
+        foreach (FileInfo file in directory.GetFiles())
+            //删除此文件
+            file.Delete();
+
+        directory.GetDirectories().ToList().ForEach(item =>
+        {
+            DeleteAllFiles(item);
+            //删除所有空目录
+            item.Delete();
+        });
+    }
 }
