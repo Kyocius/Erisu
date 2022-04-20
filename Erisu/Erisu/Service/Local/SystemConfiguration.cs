@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Erisu.Service.Network.API;
+using System;
 using System.Runtime.InteropServices;
 
 
@@ -37,4 +38,6 @@ public class SystemConfiguration
             return "Unkown";
         }
     }
+
+    public static BaseApi Api { get; set; } = new Mcbbs();
 }

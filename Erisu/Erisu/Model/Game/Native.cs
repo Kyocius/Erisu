@@ -8,5 +8,5 @@ namespace Erisu.Model.Game;
 
 public class Native
 {
-
+    //TODO(待实现 Library Model)
 }
