@@ -13,7 +13,7 @@ namespace Erisu.Model.Game;
 /// <summary>
 /// 游戏Library依赖
 /// </summary>
-public class Libray : IDependence
+public class Library : IDependence
 {
     [JsonProperty("downloads")]
     public Downloads Downloads { get; set; }
@@ -64,8 +64,6 @@ public class Libray : IDependence
 
         return $"{temp[0].Replace(".", PathHelper.slash)}{PathHelper.slash}{temp[1]}{PathHelper.slash}{temp[2]}{PathHelper.slash}{temp[1]}-{temp[2]}.jar";
     }
-
-    //TODO(还差两个方法没实现)
 
     public virtual HttpDownloadRequest GetDownloadRequest(string root, bool useOriginalUrl)
     {
