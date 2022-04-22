@@ -67,7 +67,7 @@ public class Libray : IDependence
 
     //TODO(还差两个方法没实现)
 
-    public virtual HttpDownloadRequest GetHttpDownloadRequest(string root, bool useOriginalUrl)
+    public virtual HttpDownloadRequest GetDownloadRequest(string root, bool useOriginalUrl)
     {
         string url;
 
@@ -94,5 +94,19 @@ public class Libray : IDependence
             FileName = Path.GetFileName(this.GetRelativePath())
         };
     }
-}
+
+    public virtual HttpDownloadRequest GetDownloadRequest(string root)
+    {
+        return new HttpDownloadRequest
+        {
+            Sha1 = this.Downloads?.Artifact.Sha1,
+            Size = this.Downloads?.Artifact.Size,
+            Url =
+            SystemConfiguration.Api != new Mojang()
+            ? $"{SystemConfiguration.Api.Libraries}/{this.GetRelativePath().Replace("\\", "/")}"
+            : this.Url,
+            Directory = new FileInfo($"{PathHelper.GetLibrariesFolder(root)}{PathHelper.slash}{this.GetRelativePath()}").Directory,
+            FileName= Path.GetFileName(this.GetRelativePath())
+        };
+    }
 }

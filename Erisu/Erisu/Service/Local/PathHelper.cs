@@ -11,7 +11,7 @@ public class PathHelper
     
     public static string GetVersionFolder(string root, string id) => $"{root}{slash}verisons{slash}{id}";
     
-    public static string GetLibrariesFoler(string root) => $"{root}{slash}libraries";
+    public static string GetLibrariesFolder(string root) => $"{root}{slash}libraries";
     
     public static string GetAssetsFolder(string root) => $"{root}{slash}assets";
     
