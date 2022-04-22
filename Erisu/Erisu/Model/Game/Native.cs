@@ -38,7 +38,7 @@ public class Native : Library
     public override string GetRelativePath()
     {
         string[] temp = Name.Split(':');
-        return $"{temp[0].Replace(".", PathHelper.X)}{PathHelper.X}{temp[1]}{PathHelper.X}{temp[2]}{PathHelper.slash}" +
+        return $"{temp[0].Replace(".", PathHelper.slash)}{PathHelper.slash}{temp[1]}{PathHelper.slash}{temp[2]}{PathHelper.slash}" +
             $"{temp[1]}-{temp[2]}-{Natives[SystemConfiguration.PlatformName.ToLower()].Replace("${arch}", SystemConfiguration.Architecture)}.jar";
     }
 }
