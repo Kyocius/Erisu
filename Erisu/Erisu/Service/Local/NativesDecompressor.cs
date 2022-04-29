@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Erisu.Model.Game;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,9 @@ public class NativesDecompressor
         Id = id;
     }
 
-    public void Decompress()
+    public void Decompress(IEnumerable<Native> natives, string nativesFolder = default)
     {
-        //TODO(待实现 Native Model)
+        nativesFolder = string.IsNullOrEmpty(nativesFolder) ? $"{PathHelper.GetVersionsFolder(Root, Id)}{PathHelper.slash}natives" : nativesFolder;
+        //TODO(还没写完，鸽一波)
     }
 }
