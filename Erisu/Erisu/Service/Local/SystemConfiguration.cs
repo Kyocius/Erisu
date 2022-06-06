@@ -21,7 +21,7 @@ public class SystemConfiguration
                 return OSPlatform.Linux;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 return OSPlatform.OSX;
-            return OSPlatform.Create("Unkown")
+            return OSPlatform.Create("Unkown");
         }
     }
 

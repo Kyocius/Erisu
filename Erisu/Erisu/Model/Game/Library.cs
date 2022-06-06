@@ -79,7 +79,7 @@ public class Library : IDependence
                 Sha1 = this.Downloads?.Artifact.Sha1,
                 Size = this.Downloads?.Artifact.Size,
                 Url = url,
-                Directory = new FileInfo($"{PathHelper.GetLibrariesFolder(root)}{PathHelper.X}{this.GetRelativePath()}").Directory,
+                Directory = new FileInfo($"{PathHelper.GetLibrariesFolder(root)}{PathHelper.slash}{this.GetRelativePath()}").Directory,
                 FileName = Path.GetFileName(this.GetRelativePath())
             };
 
@@ -88,7 +88,7 @@ public class Library : IDependence
             Sha1 = this.Downloads?.Artifact.Sha1,
             Size = this.Downloads?.Artifact.Size,
             Url = SystemConfiguration.Api != new Mojang() ? $"{SystemConfiguration.Api.Libraries}/{this.GetRelativePath().Replace("\\", "/")}" : this.Url,
-            Directory = new FileInfo($"{PathHelper.GetLibrariesFolder(root)}{PathHelper.X}{this.GetRelativePath()}").Directory,
+            Directory = new FileInfo($"{PathHelper.GetLibrariesFolder(root)}{PathHelper.slash}{this.GetRelativePath()}").Directory,
             FileName = Path.GetFileName(this.GetRelativePath())
         };
     }
